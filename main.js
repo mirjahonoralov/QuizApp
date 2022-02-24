@@ -88,7 +88,9 @@ const finishTest = (testList) => {
 
 // RENDER
 
-const renderCounter = () => (TEST_NUMBER.innerHTML = testList.length);
+const renderCounter = () => {
+  if (testList.length <= 10) TEST_NUMBER.innerHTML = testList.length;
+};
 
 const renderCalculation = () => {
   const { num_1, num_2, operation } = testList[testList.length - 1];
