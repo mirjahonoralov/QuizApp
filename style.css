@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Roboto&display=swap");
+
+* {
+  user-select: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.start {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-btn {
+  padding: 20px 30px;
+  background-color: #303030;
+  font-size: 35px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.start-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 10px #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+.point {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  animation: point 0.5s;
+}
+
+.result-point {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+@keyframes point {
+  from {
+    transform: translateX(100px);
+    opacity: 0.2;
+  }
+  to {
+    translatex: 0px;
+    opacity: 1;
+  }
+}
+
+.success {
+  background-color: rgb(0, 255, 0);
+  font-size: 20px;
+}
+.failed {
+  background-color: red;
+  color: #fff;
+  font-size: 20px;
+}
+.timed {
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+}
+
+.answers_content .col {
+  cursor: pointer;
+}
+
+.answers_content .col:hover {
+  background-color: blue !important;
+}
+
+.info {
+  position: fixed;
+  z-index: 1;
+  bottom: 15px;
+  right: 15px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .info {
+    position: unset;
+    justify-content: end;
+    margin: 15px;
+  }
+}
