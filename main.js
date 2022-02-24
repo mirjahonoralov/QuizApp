@@ -46,7 +46,6 @@ const createTest = () => {
     pushPoint(testList[testList.length - 1].answer_status);
     finishTest(testList);
   } else if (testList.length > 10) return;
-  renderCounter();
   timer();
   const num_1 = randomNumber();
   const num_2 = randomNumber();
@@ -62,6 +61,7 @@ const createTest = () => {
     answer_status: 0,
   };
   testList.push(test);
+  renderCounter();
 };
 
 const finishTest = (testList) => {
